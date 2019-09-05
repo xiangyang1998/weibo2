@@ -18,3 +18,8 @@ Route::get('/about','StaticPagesController@about')->name('about');
 //用户
 Route::get('signup','UsersController@create')->name('signup');
 Route::resource('users','UsersController');
+
+//用户登录逻辑
+Route::get('login','SessionsController@create')->name('login');
+Route::post('login','SessionsController@store')->name('login');
+Route::delete('logout','SessionsController@destroy')->name('logout');
