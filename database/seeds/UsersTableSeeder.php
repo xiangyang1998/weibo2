@@ -16,12 +16,10 @@ class UsersTableSeeder extends Seeder
         User::insert($user->makeVisible(['password', 'remember_token'])->toArray());
 
         $user = User::find(1);
-//        $user->name = 'xiangyang';
-//        $user->email = '827544120@qq.com';
-//        $user->save();
         $user->update([
             'name' => 'xiangyang',
             'email' => '827544120@qq.com',
+            'is_admin' => '1'
         ]);
     }
 }
